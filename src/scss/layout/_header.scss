@@ -1,0 +1,73 @@
+.header {
+  background-image: url("../images/cover.jpg");
+  background-position: 100%;
+  background-size: cover;
+  height: 568px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__menu {
+    background-color: $color-medium;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 284px 15px 10px;
+
+    & span {
+      display: block;
+    }
+
+    @include tablet {
+      margin: 384px 39px 20px;
+    }
+
+    @include display {
+      margin-left: 275px;
+      margin-right: 275px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 15px 45px;
+
+    @include tablet {
+      margin: 0 204px 30px;
+      width: 370px;
+    }
+    @include display {
+      margin-left: 275px;
+      margin-right: 275px;
+    }
+  }
+
+  &__scroll-down--link {
+    background-color: $color-primary;
+    width: 45px;
+    height: 45px;
+    border-radius: 22px;
+    margin: 0 138px 53px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      margin: 0 360px 45px;
+    }
+    @include display {
+      margin: 0 618px 13px;
+    }
+  }
+}
