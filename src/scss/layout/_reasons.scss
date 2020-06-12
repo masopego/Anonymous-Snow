@@ -1,0 +1,25 @@
+.reasons__page {
+  background-color: $color-light;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+.reasons {
+  margin-left: 15px;
+  margin-right: 15px;
+  display: grid;
+  grid-template-columns: 53px 184px 53px;
+  grid-row-gap: 45px;
+
+  &__title {
+    grid-column: span 4;
+  }
+  &__post {
+    grid-column: 2/3;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/3;
+  }
+}

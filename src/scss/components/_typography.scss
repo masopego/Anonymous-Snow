@@ -6,6 +6,35 @@ h2,
 h3 {
   font-family: $font-secondary;
 }
+
+/* Estilo General de los H2 */
+.contentinfo__title,
+.reasons__title {
+  font-weight: 600;
+  font-size: $font-size-large;
+  text-transform: capitalize;
+
+  @include tablet {
+    font-size: $font-size-extralarge;
+    line-height: 45px;
+  }
+
+  @include display {
+    font-size: $font-size-largeextra;
+  }
+}
+
+/* Estilo General de Botones */
+
+.contentinfo_button,
+.reasons__button {
+  & a {
+    font-size: $font-size-bottom;
+    font-weight: 500;
+  }
+}
+
+/* Header */
 .header {
   color: $color-primary;
   text-align: center;
@@ -38,6 +67,8 @@ h3 {
   }
 }
 
+/* Sección de Contenido */
+
 .contentinfo {
   line-height: 30px;
 
@@ -45,20 +76,6 @@ h3 {
     color: $color-light;
     font-size: $font-size-small;
     text-transform: capitalize;
-  }
-  &__title {
-    font-weight: 600;
-    font-size: $font-size-large;
-    text-transform: capitalize;
-
-    @include tablet {
-      font-size: $font-size-extralarge;
-      line-height: 45px;
-    }
-
-    @include display {
-      font-size: $font-size-largeextra;
-    }
   }
   &__text {
     color: $color-neutral;
@@ -72,13 +89,29 @@ h3 {
     & a {
       color: $color-bright;
       text-transform: capitalize;
-      font-size: $font-size-bottom;
-      text-align: center;
-      font-weight: 500;
 
       @include tablet {
         line-height: 45px;
       }
+    }
+  }
+}
+
+/*Sección 3 razones*/
+
+.reasons {
+  line-height: 30px;
+  text-align: center;
+
+  & span {
+    text-transform: capitalize;
+  }
+
+  &__post {
+    font-size: $font-size-regular;
+
+    & h3 {
+      font-weight: bold;
     }
   }
 }
