@@ -1,0 +1,15 @@
+.header {
+  color: $color-primary;
+  text-align: center;
+
+  &__title {
+    text-transform: uppercase;
+    font-size: $font-size-title;
+    font-family: $font-secondary;
+  }
+  &__subtitle {
+    text-transform: capitalize;
+    font-size: $font-size;
+    font-family: $font-primary;
+  }
+}
