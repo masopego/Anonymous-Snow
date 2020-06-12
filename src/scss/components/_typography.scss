@@ -6,10 +6,28 @@
     text-transform: uppercase;
     font-size: $font-size-title;
     font-family: $font-secondary;
+    line-height: 55px;
+
+    @include tablet {
+      font-size: $font-size-headline;
+      line-height: 106px;
+    }
+
+    @include display {
+      font-size: $font-size-principal;
+      line-height: 132px;
+    }
   }
   &__subtitle {
-    text-transform: capitalize;
     font-size: $font-size;
     font-family: $font-primary;
+
+    & span {
+      text-transform: capitalize;
+    }
+
+    @include tablet {
+      font-size: $font-size-large;
+    }
   }
 }
