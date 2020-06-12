@@ -5,5 +5,13 @@
   &.contentinfo__button {
     width: 76px;
     height: 45px;
+
+    @include tablet {
+      width: 91px;
+    }
+
+    @include display {
+      width: 160px;
+    }
   }
 }

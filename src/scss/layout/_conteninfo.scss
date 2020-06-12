@@ -4,8 +4,22 @@
   flex-direction: column;
   align-items: flex-start;
 
+  @include tablet {
+    padding-left: 39px;
+    padding-right: 39px;
+    padding-bottom: 60px;
+  }
+
+  @include display {
+    padding: 60px 275px;
+  }
+
   &__title {
     margin-bottom: 15px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__text {
@@ -16,6 +30,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 45px;
   }
 }
