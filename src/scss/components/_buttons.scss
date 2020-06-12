@@ -1,0 +1,9 @@
+.button--default {
+  border-radius: 22px;
+  border: 2px solid $color-bright;
+
+  &.contentinfo__button {
+    width: 76px;
+    height: 45px;
+  }
+}
