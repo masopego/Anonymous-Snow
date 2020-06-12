@@ -1,3 +1,11 @@
+body {
+  font-family: $font-primary;
+}
+h1,
+h2,
+h3 {
+  font-family: $font-secondary;
+}
 .header {
   color: $color-primary;
   text-align: center;
@@ -5,7 +13,6 @@
   &__title {
     text-transform: uppercase;
     font-size: $font-size-title;
-    font-family: $font-secondary;
     line-height: 55px;
 
     @include tablet {
@@ -20,7 +27,6 @@
   }
   &__subtitle {
     font-size: $font-size;
-    font-family: $font-primary;
 
     & span {
       text-transform: capitalize;
@@ -28,6 +34,51 @@
 
     @include tablet {
       font-size: $font-size-large;
+    }
+  }
+}
+
+.contentinfo {
+  line-height: 30px;
+
+  &__header {
+    color: $color-light;
+    font-size: $font-size-small;
+    text-transform: capitalize;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: $font-size-large;
+    text-transform: capitalize;
+
+    @include tablet {
+      font-size: $font-size-extralarge;
+      line-height: 45px;
+    }
+
+    @include display {
+      font-size: $font-size-largeextra;
+    }
+  }
+  &__text {
+    color: $color-neutral;
+    font-size: $font-size-regular;
+
+    & span {
+      text-transform: capitalize;
+    }
+  }
+  &__button {
+    & a {
+      color: $color-bright;
+      text-transform: capitalize;
+      font-size: $font-size-bottom;
+      text-align: center;
+      font-weight: 500;
+
+      @include tablet {
+        line-height: 45px;
+      }
     }
   }
 }
