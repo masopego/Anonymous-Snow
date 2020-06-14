@@ -1,17 +1,18 @@
-.button--default {
+.button {
   border-radius: 22px;
   border: 2px solid $color-bright;
+  height: 45px;
+  font-size: $font-size-medium;
+  font-weight: 500;
+  line-height: 45px;
+  text-align: center;
 
-  &.contentinfo__button {
-    width: 76px;
-    height: 45px;
+  &--primary {
+    background-color: $color-bright;
+    color: $color-primary;
+  }
 
-    @include tablet {
-      width: 91px;
-    }
-
-    @include display {
-      width: 160px;
-    }
+  &--secondary {
+    color: $color-bright;
   }
 }

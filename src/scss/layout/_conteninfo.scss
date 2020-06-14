@@ -14,7 +14,7 @@
     padding: 60px 275px;
   }
 
-  &__title {
+  & .title {
     margin-bottom: 15px;
 
     @include tablet {
@@ -30,5 +30,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .button {
+      width: 76px;
+
+      @include tablet {
+        width: 91px;
+      }
+
+      @include display {
+        width: 160px;
+      }
+    }
   }
 }

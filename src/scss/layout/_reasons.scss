@@ -1,0 +1,89 @@
+.reasons__section {
+  background-color: $color-extralight;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  width: 100%;
+
+  @include display {
+    padding-top: 60px;
+  }
+}
+
+.reasons__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include tablet {
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+
+  @include display {
+    padding-left: 85px;
+    padding-right: 85px;
+  }
+}
+.reasons {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-row-gap: 45px;
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 45px;
+  }
+
+  @include display {
+    grid-column-gap: 26px;
+  }
+
+  & .title {
+    grid-column: span 3;
+  }
+  &__post {
+    grid-column: 2/3;
+
+    & p {
+      max-width: 212px;
+      margin: 0 auto;
+
+      @include display {
+        max-width: 300px;
+      }
+    }
+
+    @include tablet {
+      grid-column: span 1;
+
+      & h3 {
+        padding-bottom: 14px;
+      }
+    }
+  }
+  &__button {
+    grid-column: 2/3;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      margin-top: 15px;
+    }
+
+    .button {
+      width: 184px;
+
+      @include tablet {
+        width: 210px;
+      }
+
+      @include display {
+        width: 255px;
+      }
+    }
+  }
+}

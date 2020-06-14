@@ -1,17 +1,12 @@
 body {
   font-family: $font-primary;
 }
-h1,
-h2,
-h3 {
-  font-family: $font-secondary;
-}
-.header {
-  color: $color-primary;
-  text-align: center;
 
-  &__title {
-    text-transform: uppercase;
+.title {
+  font-family: $font-secondary;
+  font-weight: 600;
+
+  &--large {
     font-size: $font-size-title;
     line-height: 55px;
 
@@ -25,31 +20,9 @@ h3 {
       line-height: 132px;
     }
   }
-  &__subtitle {
-    font-size: $font-size;
 
-    & span {
-      text-transform: capitalize;
-    }
-
-    @include tablet {
-      font-size: $font-size-large;
-    }
-  }
-}
-
-.contentinfo {
-  line-height: 30px;
-
-  &__header {
-    color: $color-light;
-    font-size: $font-size-small;
-    text-transform: capitalize;
-  }
-  &__title {
-    font-weight: 600;
+  &--medium {
     font-size: $font-size-large;
-    text-transform: capitalize;
 
     @include tablet {
       font-size: $font-size-extralarge;
@@ -60,25 +33,64 @@ h3 {
       font-size: $font-size-largeextra;
     }
   }
+
+  &--small {
+    font-size: $font-size-regular;
+
+    @include tablet {
+      font-size: $font-size-large;
+    }
+  }
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Header */
+.header {
+  color: $color-primary;
+  text-align: center;
+
+  &__subtitle {
+    font-size: $font-size;
+
+    @include tablet {
+      font-size: $font-size-large;
+    }
+  }
+}
+
+/* Sección de Contenido */
+
+.contentinfo {
+  line-height: 30px;
+
+  &__header {
+    color: $color-light;
+    font-size: $font-size-small;
+  }
   &__text {
     color: $color-neutral;
     font-size: $font-size-regular;
-
-    & span {
-      text-transform: capitalize;
-    }
   }
-  &__button {
-    & a {
-      color: $color-bright;
-      text-transform: capitalize;
-      font-size: $font-size-bottom;
-      text-align: center;
-      font-weight: 500;
+}
 
-      @include tablet {
-        line-height: 45px;
-      }
+/*Sección 3 razones*/
+
+.reasons {
+  line-height: 30px;
+  text-align: center;
+
+  &__post {
+    font-size: $font-size-regular;
+
+    @include tablet {
+      font-size: $font-size-medium;
     }
   }
 }
