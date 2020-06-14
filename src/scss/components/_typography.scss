@@ -108,4 +108,8 @@ body {
   &--credits {
     font-size: $font-size-small;
   }
+
+  @include tablet {
+    text-align: left;
+  }
 }
