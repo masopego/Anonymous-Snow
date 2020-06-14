@@ -1,46 +1,12 @@
 body {
   font-family: $font-primary;
 }
-h1,
-h2,
-h3 {
+
+.title {
   font-family: $font-secondary;
-}
-
-/* Estilo General de los H2 */
-.contentinfo__title,
-.reasons__title {
   font-weight: 600;
-  font-size: $font-size-large;
-  text-transform: capitalize;
 
-  @include tablet {
-    font-size: $font-size-extralarge;
-    line-height: 45px;
-  }
-
-  @include display {
-    font-size: $font-size-largeextra;
-  }
-}
-
-/* Estilo General de Botones */
-
-.contentinfo_button,
-.reasons__button {
-  & a {
-    font-size: $font-size-bottom;
-    font-weight: 500;
-  }
-}
-
-/* Header */
-.header {
-  color: $color-primary;
-  text-align: center;
-
-  &__title {
-    text-transform: uppercase;
+  &--large {
     font-size: $font-size-title;
     line-height: 55px;
 
@@ -54,12 +20,44 @@ h3 {
       line-height: 132px;
     }
   }
+
+  &--medium {
+    font-size: $font-size-large;
+
+    @include tablet {
+      font-size: $font-size-extralarge;
+      line-height: 45px;
+    }
+
+    @include display {
+      font-size: $font-size-largeextra;
+    }
+  }
+
+  &--small {
+    font-size: $font-size-regular;
+
+    @include tablet {
+      font-size: $font-size-large;
+    }
+  }
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Header */
+.header {
+  color: $color-primary;
+  text-align: center;
+
   &__subtitle {
     font-size: $font-size;
-
-    & span {
-      text-transform: capitalize;
-    }
 
     @include tablet {
       font-size: $font-size-large;
@@ -75,25 +73,10 @@ h3 {
   &__header {
     color: $color-light;
     font-size: $font-size-small;
-    text-transform: capitalize;
   }
   &__text {
     color: $color-neutral;
     font-size: $font-size-regular;
-
-    & span {
-      text-transform: capitalize;
-    }
-  }
-  &__button {
-    & a {
-      color: $color-bright;
-      text-transform: capitalize;
-
-      @include tablet {
-        line-height: 45px;
-      }
-    }
   }
 }
 
@@ -103,15 +86,11 @@ h3 {
   line-height: 30px;
   text-align: center;
 
-  & span {
-    text-transform: capitalize;
-  }
-
   &__post {
     font-size: $font-size-regular;
 
-    & h3 {
-      font-weight: bold;
+    @include tablet {
+      font-size: $font-size-medium;
     }
   }
 }
