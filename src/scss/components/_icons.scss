@@ -8,9 +8,17 @@
     height: 14px;
   }
 
-  &.icon-scroll-down {
-    background-image: url("../images/ico-scroll-down.svg");
-    width: 20px;
-    height: 12px;
+  &.icon-scroll {
+    &--down {
+      background-image: url("../images/ico-scroll-down.svg");
+      width: 20px;
+      height: 12px;
+    }
+
+    &--up {
+      background-image: url("../images/ico-arrow.svg");
+      width: 29px;
+      height: 32px;
+    }
   }
 }
