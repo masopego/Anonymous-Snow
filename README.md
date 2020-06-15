@@ -14,17 +14,30 @@ Durante las 12 horas que duraba el ejercio, se nos plantea resolver varios punto
 
 ## Módulo 1
 
+- Incorporar un botón de hamburguesa en la esquina superior izquierda y mantenerse fijo al realizar scroll.
+- Enlazar el menú hamburguesa con la página de Adalab.
+
+## Módulo 2
+
 El objetivo de esta sección es dar la bienvenida al usuario a la página y captar su atención desde el primer momento. Entre los retos que nos encontramos tenemos:
 
 - Establecer una imagen de fondo que ocupe toda la ventana del navegador.
   Maquetarlo completamente en flexbox.
-- Incorporar un botón de hamburguesa en la esquina superior izquierda y mantenerse fijo al realizar scroll.
-- Enlazar el menú hamburguesa con la página de Adalab.
 
 Además de resolver los retos, incorporamos una animación a la cabecera: "Snow". Cogiendo de base una imagen de puntos blancos y fondo transparente en png, la posicionamos encima de la imagen de fondo del header. Para realizar el efecto de la transición, usamos su background-position. Para aumentar el efecto, jugamos con el background-size, la opacidad y el desenfoque.
 
 ```
-`&\_\_snow { position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px; background-image: url(http://www.freepngimg.com/download/winter_snow/4-2-white-snow-png.png); animation-name: snow-city; animation-duration: 40s; animation-timing-function: linear; animation-iteration-count: infinite; }`
+&__snow {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background-image: url(http://www.freepngimg.com/download/winter_snow/4-2-white-snow-png.png);
+  animation-name: snow-city;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }`
 
 @keyframes snow-city {
   from {
@@ -43,7 +56,7 @@ Además de resolver los retos, incorporamos una animación a la cabecera: "Snow"
 }
 ```
 
-Para realizar esta animación, nos hemos inspirado en la página de Movistar+ Series. [Aquí](https://lazona.movistarplus.es/) un ejemplo.
+Para realizar esta animación, nos hemos inspirado en la página de Movistar+ Series. [Aquí](https://lazona.movistarplus.es/), un ejemplo.
 
 ## Módulo 2
 
@@ -53,7 +66,14 @@ Se trata de la primera sección del _main_. Los retos que encontramos fueron:
 
 Como parte de las mejoras indispensables, tenemos que insertar una transición en el botón "Go". Nos decantamos por cambiar el _background-color_, _box-shadow_, _border_, _color_.
 
-`&:hover { color: $color-primary; background-color: $color-dark; box-shadow: 0 1px 2px 0 $color-dark; border: 2px solid $color-dark; }`
+```
+&:hover {
+    color: $color-primary;
+    background-color: $color-dark;
+    box-shadow: 0 1px 2px 0 $color-dark;
+    border: 2px solid $color-dark;
+}
+```
 
 ## Módulo 3
 
@@ -65,7 +85,13 @@ Además de cumplir con este requisito, incluimos en la maquetación con CSS Grid
 
 Como parte de las mejoras indispensables, tenemos que insertar una transición en el botón "Go". Nos decantamos por cambiar el _background-color_, _box-shadow_, _border_.
 
-`&:hover { background-color: $color-dark; box-shadow: 0 1px 2px 0 $color-dark; border: 2px solid $color-dark; }`
+```
+&:hover {
+  background-color: $color-dark;
+  box-shadow: 0 1px 2px 0 $color-dark;
+  border: 2px solid $color-dark;
+}
+```
 
 ## Módulo 4
 
@@ -76,10 +102,33 @@ En esta sección, se presentan los siguientes retos:
 
 Además de realizar estas cuestiones, añadimos una animación al botón de footer para que se mantenga siempre flotando, como si diera saltos. Para favorecer una animación fluida, le añadimos cuatro posiciones:
 
-`&__scroll { width: 100%; position: absolute; top: 0; left: 0; transform: translate(0, -25px); animation-name: button-move; animation-duration: 1s; animation-iteration-count: infinite; }`
+```
+&__scroll {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, -25px);
+  animation-name: button-move;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
 
-`@keyframes button-move { 0% { transform: translate(0, -30px); } 50% { transform: translate(0, -25px); } 50% { transform: translate(0, -25px); } 100% { transform: translate(0, -30px); } }`
+
+@keyframes button-move {
+  0% { transform: translate(0, -30px); }
+  50% { transform: translate(0, -25px); }
+  50% { transform: translate(0, -25px); }
+  100% { transform: translate(0, -30px); }
+}
+```
 
 También, incluimos una pequeña animación a los enlaces para que cambien de color suavemente cuando se hace _hover_:
 
-`& a { padding: 2px; transition: color ease 0.5s; &:hover { color: $color-bright; } }`
+```
+& a {
+  padding: 2px;
+  transition: color ease 0.5s;
+  &:hover { color: $color-bright; }
+}
+```
