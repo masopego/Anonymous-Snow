@@ -1,124 +1,85 @@
 ![Adalab](https://beta.adalab.es/resources/images/adalab-logo-155x61-bg-white.png)
 
-# Adalab web starter kit
+# ❄️ We ❤︎ Components: Evaluación Final-masopego
 
-Ahoy! Este es nuestro Starter Kit creado en **node y gulp**. ¿Y qué es un Starter kit? Pues es una **plantilla de proyecto con funcionalidades preinstaladas y preconfiguradas**.
+Como parte de la evaluación final del Módulo I (HTML y CSS), se nos propone maquetar la _home_ de la página ficticia "Anonymous Proxy".
 
-Este Kit incluye un motor de plantillas HTML, el preprocesador SASS y un servidor local y muchas cosas más. El Kit nos ayuda a trabajar más cómodamente, nos automatiza tareas.
+Durante las 12 horas que duraba el ejercio, se nos plantea resolver varios puntos:
 
-En el Kit hay 3 tipos de ficheros y carpetas:
+- Usar **Sass**.
+- Usar **flexbox** y **CSS Grid**.
+- Usar **media queries**.
+- Resolver algunas **interacciones** usando transiciones.
+  -Emplear **Gulp** para automatizar tareas.
 
-- Los ficheros que están sueltos en la raíz del repositorio, como gulpfile.js, package.json... Son la configuración del proyecto y no necesitamos modificarlos.
-- La carpeta `src/`: son los ficheros de nuestra página web, como HTML, CSS, JS...
-- Las carpetas `public/` y `docs/`, que son generadas automáticamente cuando arrancamos el proyecto. El Kit lee los ficheros que hay dentro de `src/`, los procesa y los genera dentro de `public/` y `docs/`.
+## Módulo 1
 
-## Guía de inicio rápido
+El objetivo de esta sección es dar la bienvenida al usuario a la página y captar su atención desde el primer momento. Entre los retos que nos encontramos tenemos:
 
-> **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) para trabajar con este Starter Kit:
+- Establecer una imagen de fondo que ocupe toda la ventana del navegador.
+  Maquetarlo completamente en flexbox.
+- Incorporar un botón de hamburguesa en la esquina superior izquierda y mantenerse fijo al realizar scroll.
+- Enlazar el menú hamburguesa con la página de Adalab.
 
-### Pasos a seguir cada vez que queremos arrancar un proyecto desde cero:
-
-1. **Crea tu propio repositorio.**
-1. Descarga este **Starter kit desde GitHub**.
-   - No recomendamos que clones este repo ya que no podrás añadir commits.
-1. **Copia todos los ficheros** de este Starter kit en la carpeta raíz de tu repositorio.
-   - Recuerda que debes copiar **también los ficheros ocultos**.
-   - Si has decidido clonar este repo, no debes copiar la carpeta `.git`. Si lo haces estarás machacando tu propio repositorio.
-1. **Abre una terminal** en la carpeta raíz de tu repositorio.
-1. **Instala las dependencias** locales ejecutando en la terminal el comando:
-
-```bash
-npm install
-```
-
-### Pasos para arrancar el proyecto:
-
-Una vez hemos instalado las dependencias, vamos a arrancar el proyecto. **El proyecto hay que arrancarlo cada vez que te pongas a programar.** Para ello ejecuta el comando:
-
-```bash
-npm start
-```
-
-Este comando:
-
-- **Abre una ventana de Chrome y muestra tu página web**, al igual que hace el plugin de VS Code Live Server (Go live).
-- También **observa** todos los ficheros que hay dentro de la carpeta `src/`, para que cada vez que modifiques un fichero **refresca tu página en Chrome**.
-- También **procesa los ficheros** HTML, SASS / CSS y JS y los **genera y guarda en la carpeta `public/`**. Por ejemplo:
-   - Convierte los ficheros SASS en CSS.
-   - Combina los diferentes ficheros de HTML y los agrupa en uno o varios ficheros HTML.
-
-Después de ejecutar `npm start` ya puedes empezar a editar todos los ficheros que están dentro de la carpeta `src/` y programar cómodamente.
-
-### Pasos para publicar el proyecto en GitHub Pages:
-
-Para generar tu página para producción ejecuta el comando:
-
-```bash
-npm run docs
-```
-
-Y a continuación:
-
-1. Sube a tu repo la carpeta `docs/` que se te acaba de generar.
-1. Entra en la pestaña `settings` de tu repo.
-1. Y en el apartado de GitHub Pages activa la opción **master branch /docs folder**.
-1. Y ya estaría!!!
-
-Además, los comandos:
-
-```bash
-npm run push-docs
-```
-o
-
-```bash
-npm run deploy
-```
-
-son un atajo que nos genera la versión de producción y hace push de la carpeta `docs/` del tirón. Te recomendamos ver el fichero `package.json` para aprender cómo funciona.
-
-## Flujo de archivos con Gulp
-
-Estas tareas de Gulp producen el siguiente flujo de archivos:
-
-![Gulp flow](./gulp-flow.png)
-
-## `gulpfile.js` y `config.json`
-
-Nuestro **gulpfile.js** usa el fichero `config.json` de configuración con las rutas de los archivos a generar / observar.
-
-De esta manera separarmos las acciones que están en `gulpfile.js` de la configuración de las acciones que están en `config.json`.
-
-## Estructura de carpetas
-
-La estructura de carpetas tiene esta pinta:
+Además de resolver los retos, incorporamos una animación a la cabecera: "Snow". Cogiendo de base una imagen de puntos blancos y fondo transparente en png, la posicionamos encima de la imagen de fondo del header. Para realizar el efecto de la transición, usamos su background-position. Para aumentar el efecto, jugamos con el background-size, la opacidad y el desenfoque.
 
 ```
-src
- ├─ api // los ficheros de esta carpeta se copian en public/api/
- |  └─ data.json
- ├─ images
- |  └─ logo.jpg
- ├─ js // los ficheros de esta carpeta se concatenan en el fichero main.js y este se guarda en public/main.js
- |  ├─ main.js
- |  └─ events.js
- ├─ scss
- |  ├─ components
- |  ├─ core
- |  ├─ layout
- |  └─ pages
- └─ html
-    └─ partials
+`&\_\_snow { position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px; background-image: url(http://www.freepngimg.com/download/winter_snow/4-2-white-snow-png.png); animation-name: snow-city; animation-duration: 40s; animation-timing-function: linear; animation-iteration-count: infinite; }`
+
+@keyframes snow-city {
+  from {
+    opacity: 0.5;
+    filter: blur(0.1xp);
+    background-size: 300px;
+    background-position: 0 -2000px;
+  }
+
+  to {
+    opacity: 0.7;
+    filter: blur(0.5px);
+    background-size: 550px;
+    background-position: 0 -1000px;
+  }
+}
 ```
 
-> **NOTA:** Los partials de HTML y SASS del proyecto son orientativos. Te recomendamos usar los que quieras, y borrar los que no uses.
+Para realizar esta animación, nos hemos inspirado en la página de Movistar+ Series. [Aquí](https://lazona.movistarplus.es/) un ejemplo.
 
-## Vídeotutoriales del Starter kit
+## Módulo 2
 
-- [Qué es, trabajar con la versión de desarrollo y rutas relativas](https://www.youtube.com/watch?v=XwvhXvBijos)
-- [Migración de un proyecto, trabajar con la versión de producción y GitHub Pages](https://www.youtube.com/watch?v=qqGClcgt9Uc)
-- [Motor de plantillas](https://www.youtube.com/watch?v=4GwXOJ045Zg)
+Se trata de la primera sección del _main_. Los retos que encontramos fueron:
 
-## Falta algo?
+- Maquetarlo para que mantuviera en todos los dispositivos alineación a la izquierda.
 
-Echas de menos que el kit haga algo en concreto? Pidelo sin problema a través de las issues o si te animas a mejorarlo mándanos un PR :)
+Como parte de las mejoras indispensables, tenemos que insertar una transición en el botón "Go". Nos decantamos por cambiar el _background-color_, _box-shadow_, _border_, _color_.
+
+`&:hover { color: $color-primary; background-color: $color-dark; box-shadow: 0 1px 2px 0 $color-dark; border: 2px solid $color-dark; }`
+
+## Módulo 3
+
+En esta sección, se presentan los siguientes retos:
+
+- Maquetar los 3 elementos del listado con CSS Grid en todos los tamaños de pantalla.
+
+Además de cumplir con este requisito, incluimos en la maquetación con CSS Grid el título de la sección y el botón de "More reasons".
+
+Como parte de las mejoras indispensables, tenemos que insertar una transición en el botón "Go". Nos decantamos por cambiar el _background-color_, _box-shadow_, _border_.
+
+`&:hover { background-color: $color-dark; box-shadow: 0 1px 2px 0 $color-dark; border: 2px solid $color-dark; }`
+
+## Módulo 4
+
+En esta sección, se presentan los siguientes retos:
+
+- Maquetar el footer usando flexbox.
+- Todos los elementos de la columna "Articles" y "Twitter" tienen que ser enlaces a la página de Adalab.
+
+Además de realizar estas cuestiones, añadimos una animación al botón de footer para que se mantenga siempre flotando, como si diera saltos. Para favorecer una animación fluida, le añadimos cuatro posiciones:
+
+`&__scroll { width: 100%; position: absolute; top: 0; left: 0; transform: translate(0, -25px); animation-name: button-move; animation-duration: 1s; animation-iteration-count: infinite; }`
+
+`@keyframes button-move { 0% { transform: translate(0, -30px); } 50% { transform: translate(0, -25px); } 50% { transform: translate(0, -25px); } 100% { transform: translate(0, -30px); } }`
+
+También, incluimos una pequeña animación a los enlaces para que cambien de color suavemente cuando se hace _hover_:
+
+`& a { padding: 2px; transition: color ease 0.5s; &:hover { color: $color-bright; } }`

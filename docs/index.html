@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>We ❤︎ Components</title>
+    <title>❄️ We ❤︎ Components</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap"
       rel="stylesheet"
@@ -12,7 +12,8 @@
   </head>
 
   <body>
-    <header class="header" id="#page-block">
+    <header class="header" id="home-section-block">
+      <div class="header__snow"></div>
       <nav class="header__menu">
         <a href="https://adalab.es/" title="Ir a la home de Adalab" target="_blank">
           <span class="icon icon-hamburger"></span>
@@ -20,70 +21,51 @@
       </nav>
       <h1 class="title title--large">
         <span class="uppercase">anonymous</span>
-        <span class="uppercase">proxy</span>
+        <span class="uppercase">snow</span>
       </h1>
       <blockquote class="header__subtitle">
-        <span class="capitalize">in</span> hac habitasse platea dictumst.
+        <span class="capitalize">winter</span> is coming to town.
       </blockquote>
-      <a
-        href="#first-section-block"
-        class="header__scroll-down--link"
-        title="Ir a la sección principal"
-      >
+      <a href="#first-section-block" class="header__scroll-down--link" title="Ir a la sección principal">
         <span class="icon icon-scroll--down"></span>
       </a>
     </header>
 
     <main>
-      <section role="contentinfo">
+      <section>
         <div class="contentinfo">
           <small class="contentinfo__header capitalize">insomnia tips</small>
           <h2 class="title title--medium capitalize">looking throught a window</h2>
           <p class="contentinfo__text">
-            <span class="capitalize">donec</span> accumsan, nulla ut volutpat
-            porttitor, quam odio tempus felics, at luctus ex diam nec lectus. Vivamus
-            semper sodales rutrum.
+            <span class="capitalize">donec</span> accumsan, nulla ut volutpat porttitor, quam odio tempus felics, at luctus ex diam nec lectus.
+            Vivamus semper sodales rutrum.
           </p>
           <div class="contentinfo__button">
-            <a
-              href="#"
-              title="Conocer más"
-              class="button button--secondary capitalize"
-            >
+            <a href="https://adalab.es/curso-desarrollo-web/" title="Conocer más" class="button button--secondary capitalize" target="_blank">
               go
             </a>
           </div>
         </div>
       </section>
 
-      <section role="reasons" id="first-section-block" class="reasons__section">
+      <section id="first-section-block" class="reasons__section">
         <div class="reasons__container">
           <div class="reasons">
             <h2 class="title title--medium">3 reasons to purchase</h2>
             <article class="reasons__post">
               <h3><span class="capitalize">ut</span> sed metus</h3>
-              <p>
-                <span class="capitalize">lorem</span> ipsum dolor sit amet,
-                consecteur.
-              </p>
+              <p><span class="capitalize">lorem</span> ipsum dolor sit amet, consecteur.</p>
             </article>
             <article class="reasons__post">
-              <h3 class="title title--small">
-                <span class="capitalize">curabitur</span> ac erat
-              </h3>
-              <p>
-                <span class="capitalize">mauris</span> mattis urna quis lorem
-                molestie.
-              </p>
+              <h3 class="title title--small"><span class="capitalize">curabitur</span> ac erat</h3>
+              <p><span class="capitalize">mauris</span> mattis urna quis lorem molestie.</p>
             </article>
             <article class="reasons__post">
               <h3><span class="capitalize">morbi</span>dictum</h3>
-              <p>
-                <span class="capitalize">aliquam</span> in dolor et dolor tincidunt.
-              </p>
+              <p><span class="capitalize">aliquam</span> in dolor et dolor tincidunt.</p>
             </article>
             <div class="reasons__button">
-              <a href="#" title="Conocer más razones" class="button button--primary">
+              <a href="https://medium.com/adalab" title="Conocer más razones" class="button button--primary" target="_blank">
                 <span class="capitalize">more </span>reasons
               </a>
             </div>
@@ -95,32 +77,60 @@
     <footer class="footer">
       <div class="footer__container">
         <div class="footer__scroll">
-          <a
-            href="#page-block"
-            class="footer__scroll-up--link"
-            title="Ir al inicio de la página"
-          >
+          <a href="#home-section-block" class="footer__scroll-up--link" title="Ir al inicio de la página">
             <span class="icon icon-scroll--up"></span>
           </a>
         </div>
         <div class="footer__menu footer__menu--credits">
-          <p>&copy;2017</p>
+          <p>&copy;2020</p>
           <p>we<span> ❤︎ </span>components</p>
         </div>
         <nav class="footer__menu footer__menu--list">
           <ul>
-            <li class="uppercase">articles</li>
-            <li class="uppercase">books</li>
-            <li class="uppercase">events</li>
-            <li class="uppercase">reasons</li>
-            <li class="uppercase">tips</li>
+            <li class="uppercase">
+              <a href="https://adalab.es/" title="Ir a la home de Adalab" target="_blank">
+                articles
+              </a>
+            </li>
+            <li class="uppercase">
+              <a href="https://adalab.es/" title="Ir a la home de Adalab" target="_blank">
+                books
+              </a>
+            </li>
+            <li class="uppercase">
+              <a href="https://adalab.es/" title="Ir a la home de Adalab" target="_blank">
+                events
+              </a>
+            </li>
+            <li class="uppercase">
+              <a href="https://adalab.es/" title="Ir a la home de Adalab" target="_blank">
+                reasons
+              </a>
+            </li>
+            <li class="uppercase">
+              <a href="https://adalab.es/" title="Ir a la home de Adalab" target="_blank">
+                tips
+              </a>
+            </li>
           </ul>
         </nav>
         <nav class="footer__menu footer__menu--list">
           <ul>
-            <li class="uppercase">twitter</li>
-            <li class="uppercase">instagram</li>
-            <li class="uppercase">mastodon.social</li>
+            <li class="uppercase">
+              <a href="https://adalab.es/" title="Ir a la home de Adalab" target="_blank">
+                twitter
+              </a>
+            </li>
+            <li class="uppercase">
+              <a href="https://adalab.es/" title="Ir a la home de Adalab" target="_blank">
+                instagram
+              </a>
+            </li>
+            <li class="uppercase">
+              <a href="https://adalab.es/" title="Ir a la home de Adalab" target="_blank">
+                mastodon.social
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
