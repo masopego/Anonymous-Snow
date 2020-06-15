@@ -8,6 +8,8 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  color: $color-primary;
+  text-align: center;
 
   &__snow {
     position: absolute;
@@ -59,10 +61,12 @@
 
   &__subtitle {
     margin: 0 15px 45px;
+    font-size: $font-size;
 
     @include tablet {
       margin: 0 204px 30px;
       width: 370px;
+      font-size: $font-size-large;
     }
     @include display {
       margin-left: 275px;

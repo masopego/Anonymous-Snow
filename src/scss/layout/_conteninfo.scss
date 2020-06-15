@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  line-height: 30px;
 
   @include tablet {
     padding-left: 39px;
@@ -12,6 +13,11 @@
 
   @include display {
     padding: 60px 275px;
+  }
+
+  &__header {
+    color: $color-light;
+    font-size: $font-size-small;
   }
 
   & .title {
@@ -24,6 +30,8 @@
 
   &__text {
     margin-bottom: 30px;
+    color: $color-neutral;
+    font-size: $font-size-regular;
   }
 
   &__button {
