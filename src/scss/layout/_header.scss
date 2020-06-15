@@ -9,6 +9,19 @@
   justify-content: flex-end;
   align-items: center;
 
+  &__snow {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-image: url(http://www.freepngimg.com/download/winter_snow/4-2-white-snow-png.png);
+    animation-name: snow-city;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
   &__menu {
     background-color: $color-medium;
     position: fixed;
@@ -74,5 +87,21 @@
     @include display {
       margin: 0 618px 13px;
     }
+  }
+}
+
+@keyframes snow-city {
+  from {
+    opacity: 0.5;
+    filter: blur(0.1xp);
+    background-size: 300px;
+    background-position: 0 -2000px;
+  }
+
+  to {
+    opacity: 0.7;
+    filter: blur(0.5px);
+    background-size: 550px;
+    background-position: 0 -1000px;
   }
 }
