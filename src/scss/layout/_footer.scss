@@ -26,8 +26,12 @@
   }
 
   &__menu {
+    line-height: 30px;
+    text-align: center;
+
     @include tablet {
       width: 210px;
+      text-align: left;
     }
 
     @include display {
@@ -37,14 +41,20 @@
 
   &__menu--list {
     padding-bottom: 30px;
+    font-size: $font-size;
 
     @include tablet {
       padding-bottom: 0px;
+    }
+
+    & a {
+      padding: 2px;
     }
   }
 
   &__menu--credits {
     order: 1;
+    font-size: $font-size-small;
     & span {
       color: $color-bright;
     }
