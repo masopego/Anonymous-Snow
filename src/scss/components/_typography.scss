@@ -94,3 +94,22 @@ body {
     }
   }
 }
+
+/* Sección Footer */
+
+.footer__menu {
+  line-height: 30px;
+  text-align: center;
+
+  &--list {
+    font-size: $font-size;
+  }
+
+  &--credits {
+    font-size: $font-size-small;
+  }
+
+  @include tablet {
+    text-align: left;
+  }
+}
